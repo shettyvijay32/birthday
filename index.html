@@ -1,7 +1,9 @@
 ```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -31,7 +33,6 @@ body {
 }
 
 
-
 /* =====================================================
    BACKGROUND
 ===================================================== */
@@ -40,10 +41,12 @@ body::before {
     content: "";
     position: fixed;
     inset: 0;
+
     background:
         radial-gradient(circle at 20% 20%, #ff4f8140, transparent 30%),
         radial-gradient(circle at 80% 30%, #a855f740, transparent 30%),
         radial-gradient(circle at 50% 90%, #ff8fab30, transparent 35%);
+
     z-index: -3;
 }
 
@@ -61,10 +64,13 @@ body::before {
 
 .star {
     position: absolute;
+
     width: 3px;
     height: 3px;
+
     background: white;
     border-radius: 50%;
+
     animation: twinkle 2s infinite alternate;
 }
 
@@ -79,6 +85,7 @@ body::before {
         opacity: 1;
         transform: scale(1.5);
     }
+
 }
 
 
@@ -89,15 +96,22 @@ body::before {
 .heart {
     position: fixed;
     bottom: -50px;
+
     pointer-events: none;
+
     animation: heartFloat linear forwards;
+
     z-index: 1;
 }
 
 @keyframes heartFloat {
 
     0% {
-        transform: translateY(0) scale(0.5) rotate(0deg);
+        transform:
+            translateY(0)
+            scale(0.5)
+            rotate(0deg);
+
         opacity: 0;
     }
 
@@ -106,9 +120,15 @@ body::before {
     }
 
     100% {
-        transform: translateY(-110vh) scale(1.3) rotate(25deg);
+
+        transform:
+            translateY(-110vh)
+            scale(1.3)
+            rotate(25deg);
+
         opacity: 0;
     }
+
 }
 
 
@@ -117,20 +137,28 @@ body::before {
 ===================================================== */
 
 section {
+
     min-height: 100vh;
+
     padding: 90px 20px;
 
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
     flex-direction: column;
 
     text-align: center;
 }
 
 .container {
+
     width: 100%;
+
     max-width: 1000px;
+
     margin: auto;
 }
 
@@ -156,11 +184,13 @@ section {
 
     padding: 10px 20px;
 
-    border: 1px solid rgba(255,255,255,0.3);
+    border:
+        1px solid rgba(255,255,255,0.3);
 
     border-radius: 50px;
 
-    background: rgba(255,255,255,0.08);
+    background:
+        rgba(255,255,255,0.08);
 
     backdrop-filter: blur(10px);
 
@@ -174,7 +204,8 @@ section {
 
 .hero h1 {
 
-    font-size: clamp(3.5rem, 12vw, 8rem);
+    font-size:
+        clamp(3.5rem, 12vw, 8rem);
 
     line-height: 0.95;
 
@@ -185,15 +216,17 @@ section {
         0 10px 40px #00000080;
 }
 
+
 .punnu {
 
-    background: linear-gradient(
-        90deg,
-        #ff8fab,
-        #ffd6e5,
-        #c4b5fd,
-        #ff8fab
-    );
+    background:
+        linear-gradient(
+            90deg,
+            #ff8fab,
+            #ffd6e5,
+            #c4b5fd,
+            #ff8fab
+        );
 
     background-size: 300%;
 
@@ -202,7 +235,8 @@ section {
 
     color: transparent;
 
-    animation: gradientMove 5s infinite;
+    animation:
+        gradientMove 5s infinite;
 }
 
 @keyframes gradientMove {
@@ -218,6 +252,7 @@ section {
     100% {
         background-position: 0%;
     }
+
 }
 
 
@@ -270,7 +305,8 @@ section {
         scale(1.05);
 
     box-shadow:
-        0 15px 40px rgba(255,120,170,0.4);
+        0 15px 40px
+        rgba(255,120,170,0.4);
 }
 
 
@@ -288,7 +324,8 @@ section {
 
     border-radius: 35px;
 
-    background: rgba(255,255,255,0.08);
+    background:
+        rgba(255,255,255,0.08);
 
     border:
         1px solid rgba(255,255,255,0.15);
@@ -296,7 +333,8 @@ section {
     backdrop-filter: blur(15px);
 
     box-shadow:
-        0 25px 70px rgba(0,0,0,0.35);
+        0 25px 70px
+        rgba(0,0,0,0.35);
 }
 
 .card p {
@@ -315,7 +353,8 @@ section {
 
 .section-title {
 
-    font-size: clamp(2.5rem, 7vw, 4.5rem);
+    font-size:
+        clamp(2.5rem, 7vw, 4.5rem);
 
     margin-bottom: 15px;
 }
@@ -452,7 +491,8 @@ section {
 
     width: 2px;
 
-    background: rgba(255,255,255,0.2);
+    background:
+        rgba(255,255,255,0.2);
 }
 
 .memory {
@@ -465,7 +505,8 @@ section {
 
     border-radius: 25px;
 
-    background: rgba(255,255,255,0.08);
+    background:
+        rgba(255,255,255,0.08);
 
     backdrop-filter: blur(10px);
 
@@ -500,7 +541,7 @@ section {
 
 
 /* =====================================================
-   PHOTO PLACEHOLDERS
+   PHOTO GALLERY
 ===================================================== */
 
 .photo-grid {
@@ -517,9 +558,12 @@ section {
     max-width: 750px;
 }
 
+
+/* PHOTO CARD */
+
 .photo {
 
-    min-height: 230px;
+    min-height: 300px;
 
     border-radius: 30px;
 
@@ -528,8 +572,6 @@ section {
     justify-content: center;
 
     align-items: center;
-
-    flex-direction: column;
 
     background:
         linear-gradient(
@@ -544,18 +586,52 @@ section {
     overflow: hidden;
 
     position: relative;
+
+    box-shadow:
+        0 20px 50px
+        rgba(0,0,0,0.3);
+
+    transition: 0.5s;
 }
 
-.photo span {
 
-    font-size: 4rem;
+/* PHOTO IMAGE */
+
+.photo img {
+
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 300px;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 30px;
+
+    transition:
+        transform 0.5s ease;
 }
 
-.photo p {
 
-    margin-top: 10px;
+/* PHOTO HOVER */
 
-    color: #e5ced9;
+.photo:hover {
+
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 30px 60px
+        rgba(0,0,0,0.45);
+}
+
+.photo:hover img {
+
+    transform:
+        scale(1.08);
 }
 
 
@@ -598,7 +674,8 @@ section {
         );
 
     box-shadow:
-        0 20px 40px rgba(0,0,0,0.3);
+        0 20px 40px
+        rgba(0,0,0,0.3);
 }
 
 .icing {
@@ -660,28 +737,33 @@ section {
     border-radius:
         50% 50% 50% 0;
 
-    transform: rotate(-45deg);
+    transform:
+        rotate(-45deg);
 
     top: -22px;
 
     left: -2px;
 
-    animation: flame 0.5s infinite alternate;
+    animation:
+        flame 0.5s infinite alternate;
 }
 
 @keyframes flame {
 
     from {
+
         transform:
             rotate(-45deg)
             scale(1);
     }
 
     to {
+
         transform:
             rotate(-45deg)
             scale(1.2);
     }
+
 }
 
 
@@ -748,7 +830,8 @@ section {
 
     font-size: 6rem;
 
-    animation: heartbeat 1.3s infinite;
+    animation:
+        heartbeat 1.3s infinite;
 }
 
 @keyframes heartbeat {
@@ -760,6 +843,7 @@ section {
     50% {
         transform: scale(1.2);
     }
+
 }
 
 .final h1 {
@@ -813,6 +897,7 @@ section {
             translateY(110vh)
             rotate(720deg);
     }
+
 }
 
 
@@ -834,9 +919,11 @@ section {
 
     border-radius: 50%;
 
-    border: 1px solid rgba(255,255,255,0.2);
+    border:
+        1px solid rgba(255,255,255,0.2);
 
-    background: rgba(255,255,255,0.1);
+    background:
+        rgba(255,255,255,0.1);
 
     backdrop-filter: blur(10px);
 
@@ -874,7 +961,8 @@ section {
 
     .memory {
 
-        width: calc(100% - 35px);
+        width:
+            calc(100% - 35px);
 
         margin-left: 35px !important;
 
@@ -890,7 +978,9 @@ section {
 
         display: none;
     }
+
 }
+
 
 @media(max-width: 450px) {
 
@@ -903,9 +993,30 @@ section {
 
         font-size: 4rem;
     }
+
+}
+
+
+/* =====================================================
+   MOBILE PHOTO SIZE
+===================================================== */
+
+@media(max-width: 700px) {
+
+    .photo {
+
+        min-height: 350px;
+    }
+
+    .photo img {
+
+        min-height: 350px;
+    }
+
 }
 
 </style>
+
 </head>
 
 
@@ -928,13 +1039,22 @@ section {
     <div class="container">
 
         <div class="badge">
+
             ✨ A SECRET SURPRISE FOR PUNNU ✨
+
         </div>
 
+
         <h1>
+
             Happy Birthday<br>
-            <span class="punnu">Punnu ❤️</span>
+
+            <span class="punnu">
+                Punnu ❤️
+            </span>
+
         </h1>
+
 
         <p class="hero-subtitle">
 
@@ -948,8 +1068,10 @@ section {
 
         </p>
 
-        <button class="btn"
-                onclick="startSurprise()">
+
+        <button
+            class="btn"
+            onclick="startSurprise()">
 
             🎁 Open Your Surprise
 
@@ -964,16 +1086,23 @@ section {
      LOVE LETTER
 ===================================================== -->
 
-<section id="letterSection" class="hidden">
+<section
+    id="letterSection"
+    class="hidden">
 
     <div class="container">
 
         <h2 class="section-title">
+
             💌 A Letter For Punnu
+
         </h2>
 
+
         <p class="section-subtitle">
+
             Written especially for the birthday girl.
+
         </p>
 
 
@@ -983,12 +1112,14 @@ section {
                 My dearest Punnu,
             </p>
 
+
             <p>
 
                 Today is your special day, and I just want
                 you to know how incredibly special you are.
 
             </p>
+
 
             <p>
 
@@ -999,6 +1130,7 @@ section {
 
             </p>
 
+
             <p>
 
                 You are cute in ways you probably don't even
@@ -1008,12 +1140,14 @@ section {
 
             </p>
 
+
             <p>
 
                 I hope this birthday brings you everything
                 that makes your heart happy.
 
             </p>
+
 
             <p>
 
@@ -1023,6 +1157,7 @@ section {
                 More unforgettable moments.
 
             </p>
+
 
             <p>
 
@@ -1034,9 +1169,11 @@ section {
 
             </p>
 
+
             <p style="text-align:right">
 
                 Happy Birthday, Punnu! 🌸<br>
+
                 With all my love ❤️
 
             </p>
@@ -1046,8 +1183,10 @@ section {
 
         <br><br>
 
-        <button class="btn"
-                onclick="showQualities()">
+
+        <button
+            class="btn"
+            onclick="showQualities()">
 
             ✨ Why You're So Special
 
@@ -1062,31 +1201,44 @@ section {
      QUALITIES
 ===================================================== -->
 
-<section id="qualitiesSection"
-         class="hidden">
+<section
+    id="qualitiesSection"
+    class="hidden">
 
     <div class="container">
 
         <h2 class="section-title">
+
             🌷 Punnu In Four Words
+
         </h2>
 
+
         <p class="section-subtitle">
+
             Although four words aren't nearly enough...
+
         </p>
 
 
         <div class="qualities">
 
+
             <div class="quality">
 
-                <span class="emoji">🥰</span>
+                <span class="emoji">
+                    🥰
+                </span>
 
-                <h3>Super Cute</h3>
+                <h3>
+                    Super Cute
+                </h3>
 
                 <p>
+
                     The kind of cute that makes
                     ordinary moments special.
+
                 </p>
 
             </div>
@@ -1094,13 +1246,19 @@ section {
 
             <div class="quality">
 
-                <span class="emoji">⚡</span>
+                <span class="emoji">
+                    ⚡
+                </span>
 
-                <h3>Full Of Energy</h3>
+                <h3>
+                    Full Of Energy
+                </h3>
 
                 <p>
+
                     Your energy can brighten
                     an entire room.
+
                 </p>
 
             </div>
@@ -1108,13 +1266,19 @@ section {
 
             <div class="quality">
 
-                <span class="emoji">🌸</span>
+                <span class="emoji">
+                    🌸
+                </span>
 
-                <h3>Beautiful Heart</h3>
+                <h3>
+                    Beautiful Heart
+                </h3>
 
                 <p>
+
                     Your kindness is one of
                     the things that makes you special.
+
                 </p>
 
             </div>
@@ -1122,24 +1286,33 @@ section {
 
             <div class="quality">
 
-                <span class="emoji">✨</span>
+                <span class="emoji">
+                    ✨
+                </span>
 
-                <h3>One Of A Kind</h3>
+                <h3>
+                    One Of A Kind
+                </h3>
 
                 <p>
+
                     There is only one Punnu.
                     And that's pretty amazing.
+
                 </p>
 
             </div>
+
 
         </div>
 
 
         <br><br><br>
 
-        <button class="btn"
-                onclick="showMemories()">
+
+        <button
+            class="btn"
+            onclick="showMemories()">
 
             📖 Our Little Story
 
@@ -1154,31 +1327,42 @@ section {
      TIMELINE
 ===================================================== -->
 
-<section id="memoriesSection"
-         class="hidden">
+<section
+    id="memoriesSection"
+    class="hidden">
 
     <div class="container">
 
         <h2 class="section-title">
+
             📖 Little Moments
+
         </h2>
 
+
         <p class="section-subtitle">
+
             Some moments are small...
             but become the biggest memories.
+
         </p>
 
 
         <div class="timeline">
 
+
             <div class="memory">
 
-                <h3>🌸 The Beginning</h3>
+                <h3>
+                    🌸 The Beginning
+                </h3>
 
                 <p>
+
                     Every beautiful story starts somewhere.
                     And somehow, ours became one of my
                     favorite stories.
+
                 </p>
 
             </div>
@@ -1186,12 +1370,16 @@ section {
 
             <div class="memory">
 
-                <h3>😂 The Laughs</h3>
+                <h3>
+                    😂 The Laughs
+                </h3>
 
                 <p>
+
                     The silly conversations, random jokes,
                     unexpected moments and all the laughter
                     are memories worth keeping.
+
                 </p>
 
             </div>
@@ -1199,12 +1387,16 @@ section {
 
             <div class="memory">
 
-                <h3>✨ The Little Things</h3>
+                <h3>
+                    ✨ The Little Things
+                </h3>
 
                 <p>
+
                     Sometimes it isn't the big moments.
                     It's the little things that make
                     everything feel special.
+
                 </p>
 
             </div>
@@ -1212,23 +1404,30 @@ section {
 
             <div class="memory">
 
-                <h3>❤️ Today</h3>
+                <h3>
+                    ❤️ Today
+                </h3>
 
                 <p>
+
                     Today we celebrate YOU —
                     the amazing person who makes life
                     brighter just by being herself.
+
                 </p>
 
             </div>
+
 
         </div>
 
 
         <br>
 
-        <button class="btn"
-                onclick="showPhotos()">
+
+        <button
+            class="btn"
+            onclick="showPhotos()">
 
             📸 A Few Memories
 
@@ -1243,74 +1442,60 @@ section {
      PHOTO SECTION
 ===================================================== -->
 
-<section id="photosSection"
-         class="hidden">
+<section
+    id="photosSection"
+    class="hidden">
 
     <div class="container">
 
         <h2 class="section-title">
+
             📸 Our Memories
+
         </h2>
+
 
         <p class="section-subtitle">
 
-            Your photos can go here later ❤️
+            A few beautiful memories of Punnu ❤️
 
         </p>
 
 
         <div class="photo-grid">
 
+
+            <!-- PHOTO 1 -->
+
             <div class="photo">
 
-                <span>📷</span>
-
-                <p>
-                    Add photo1.jpg.png
-                </p>
+                <img
+                    src="photo1.jpg.png"
+                    alt="Punnu Birthday Memory 1">
 
             </div>
 
 
-            <div class="photo">
-
-                <span>📷</span>
-
-                <p>
-                    Add photo2.jpg.png
-                </p>
-
-            </div>
-
+            <!-- PHOTO 2 -->
 
             <div class="photo">
 
-                <span>📷</span>
-
-                <p>
-                    Add photo3.jpg
-                </p>
+                <img
+                    src="photo2.jpg.png"
+                    alt="Punnu Birthday Memory 2">
 
             </div>
 
-
-            <div class="photo">
-
-                <span>📷</span>
-
-                <p>
-                    Add photo4.jpg
-                </p>
-
-            </div>
 
         </div>
 
 
         <br><br>
 
-        <button class="btn"
-                onclick="showCake()">
+
+        <button
+            class="btn"
+            onclick="showCake()">
 
             🎂 One More Surprise
 
@@ -1325,14 +1510,18 @@ section {
      CAKE
 ===================================================== -->
 
-<section id="cakeSection"
-         class="hidden">
+<section
+    id="cakeSection"
+    class="hidden">
 
     <div class="container">
 
         <h2 class="section-title">
+
             🎂 Make A Wish, Punnu!
+
         </h2>
+
 
         <p class="section-subtitle">
 
@@ -1347,11 +1536,6 @@ section {
 
             <div class="cake">
 
-                <div class="candle">
-
-                    <div class="flame"></div>
-
-                </div>
 
                 <div class="candle">
 
@@ -1359,31 +1543,45 @@ section {
 
                 </div>
 
+
                 <div class="candle">
 
                     <div class="flame"></div>
 
                 </div>
+
+
+                <div class="candle">
+
+                    <div class="flame"></div>
+
+                </div>
+
 
                 <div class="icing"></div>
 
+
                 <div class="cake-body"></div>
+
 
             </div>
 
         </div>
 
 
-        <button class="btn"
-                onclick="blowCandles()">
+        <button
+            class="btn"
+            onclick="blowCandles()">
 
             💨 Blow Out The Candles
 
         </button>
 
 
-        <div id="cakeMessage"
-             style="margin-top:30px">
+        <div
+            id="cakeMessage"
+            style="margin-top:30px">
+
         </div>
 
     </div>
@@ -1395,22 +1593,29 @@ section {
      GIFT
 ===================================================== -->
 
-<section id="giftSection"
-         class="hidden">
+<section
+    id="giftSection"
+    class="hidden">
 
     <div class="container">
 
         <h2 class="section-title">
+
             🎁 Your Final Surprise
+
         </h2>
 
+
         <p class="gift-text">
+
             There is something waiting for you...
+
         </p>
 
 
-        <div class="gift"
-             onclick="openGift()">
+        <div
+            class="gift"
+            onclick="openGift()">
 
             🎁
 
@@ -1418,12 +1623,16 @@ section {
 
 
         <p class="gift-text">
+
             Tap the gift ❤️
+
         </p>
 
 
-        <div class="surprise"
-             id="surprise">
+        <div
+            class="surprise"
+            id="surprise">
+
 
             <div class="card">
 
@@ -1431,15 +1640,17 @@ section {
                     ✨ Surprise! ✨
                 </h2>
 
+
                 <br>
+
 
                 <p>
-
                     Punnu...
-
                 </p>
 
+
                 <br>
+
 
                 <p>
 
@@ -1448,7 +1659,9 @@ section {
 
                 </p>
 
+
                 <br>
+
 
                 <p>
 
@@ -1457,7 +1670,9 @@ section {
 
                 </p>
 
+
                 <br>
+
 
                 <p>
 
@@ -1466,7 +1681,9 @@ section {
 
                 </p>
 
+
                 <br>
+
 
                 <p>
 
@@ -1478,10 +1695,14 @@ section {
 
                 </p>
 
+
                 <br>
 
+
                 <h2>
+
                     Happy Birthday, Punnu ❤️
+
                 </h2>
 
             </div>
@@ -1489,12 +1710,15 @@ section {
 
             <br><br>
 
-            <button class="btn"
-                    onclick="finalCelebration()">
+
+            <button
+                class="btn"
+                onclick="finalCelebration()">
 
                 🎉 One Last Thing...
 
             </button>
+
 
         </div>
 
@@ -1507,13 +1731,17 @@ section {
      FINAL
 ===================================================== -->
 
-<section id="finalSection"
-         class="hidden final">
+<section
+    id="finalSection"
+    class="hidden final">
 
     <div class="container">
 
+
         <div class="big-heart">
+
             ❤️
+
         </div>
 
 
@@ -1522,7 +1750,9 @@ section {
             Happy Birthday
 
             <span class="punnu">
+
                 Punnu
+
             </span>
 
             ❤️
@@ -1539,7 +1769,9 @@ section {
 
         </p>
 
+
         <br>
+
 
         <p>
 
@@ -1552,17 +1784,27 @@ section {
 
         </p>
 
+
         <br>
 
+
         <h2>
-            You deserve all the happiness in the world. 🌎❤️
+
+            You deserve all the happiness
+            in the world. 🌎❤️
+
         </h2>
+
 
         <br><br>
 
+
         <p>
+
             🎂 Happy Birthday, Punnu! 🎂
+
         </p>
+
 
     </div>
 
@@ -1570,11 +1812,12 @@ section {
 
 
 <!-- =====================================================
-     OPTIONAL MUSIC
+     MUSIC
 ===================================================== -->
 
-<audio id="birthdayMusic"
-       loop>
+<audio
+    id="birthdayMusic"
+    loop>
 
     <source
         src="music/birthday.mp3"
@@ -1583,9 +1826,10 @@ section {
 </audio>
 
 
-<button class="music-button"
-        onclick="toggleMusic()"
-        title="Music">
+<button
+    class="music-button"
+    onclick="toggleMusic()"
+    title="Music">
 
     🎵
 
@@ -1594,6 +1838,7 @@ section {
 
 <script>
 
+
 /* =====================================================
    STARS
 ===================================================== */
@@ -1601,23 +1846,31 @@ section {
 const stars =
     document.getElementById("stars");
 
+
 for (let i = 0; i < 120; i++) {
 
     const star =
         document.createElement("div");
 
-    star.className = "star";
+
+    star.className =
+        "star";
+
 
     star.style.left =
         Math.random() * 100 + "%";
 
+
     star.style.top =
         Math.random() * 100 + "%";
+
 
     star.style.animationDelay =
         Math.random() * 3 + "s";
 
+
     stars.appendChild(star);
+
 }
 
 
@@ -1630,15 +1883,20 @@ function reveal(id) {
     const section =
         document.getElementById(id);
 
+
     section.classList.remove("hidden");
+
 
     setTimeout(() => {
 
         section.scrollIntoView({
+
             behavior: "smooth"
+
         });
 
     }, 100);
+
 }
 
 
@@ -1650,20 +1908,29 @@ function startSurprise() {
 
     createHearts(20);
 
+
     reveal("letterSection");
+
 
     try {
 
         const music =
-            document.getElementById("birthdayMusic");
+            document.getElementById(
+                "birthdayMusic"
+            );
+
 
         music.play();
 
+
     } catch (error) {
 
-        console.log("Music needs user interaction.");
+        console.log(
+            "Music needs user interaction."
+        );
 
     }
+
 }
 
 
@@ -1673,9 +1940,13 @@ function startSurprise() {
 
 function showQualities() {
 
-    reveal("qualitiesSection");
+    reveal(
+        "qualitiesSection"
+    );
+
 
     createHearts(15);
+
 }
 
 
@@ -1685,7 +1956,9 @@ function showQualities() {
 
 function showMemories() {
 
-    reveal("memoriesSection");
+    reveal(
+        "memoriesSection"
+    );
 
 }
 
@@ -1696,7 +1969,9 @@ function showMemories() {
 
 function showPhotos() {
 
-    reveal("photosSection");
+    reveal(
+        "photosSection"
+    );
 
 }
 
@@ -1707,7 +1982,10 @@ function showPhotos() {
 
 function showCake() {
 
-    reveal("cakeSection");
+    reveal(
+        "cakeSection"
+    );
+
 
     createConfetti(30);
 
@@ -1717,16 +1995,21 @@ function showCake() {
 function blowCandles() {
 
     const flames =
-        document.querySelectorAll(".flame");
+        document.querySelectorAll(
+            ".flame"
+        );
+
 
     flames.forEach(flame => {
 
-        flame.style.display = "none";
+        flame.style.display =
+            "none";
 
     });
 
 
     createConfetti(100);
+
 
     document.getElementById(
         "cakeMessage"
@@ -1750,8 +2033,9 @@ function blowCandles() {
 
             <br>
 
-            <button class="btn"
-                    onclick="showGift()">
+            <button
+                class="btn"
+                onclick="showGift()">
 
                 🎁 Continue
 
@@ -1760,6 +2044,7 @@ function blowCandles() {
         </div>
 
     `;
+
 }
 
 
@@ -1769,7 +2054,9 @@ function blowCandles() {
 
 function showGift() {
 
-    reveal("giftSection");
+    reveal(
+        "giftSection"
+    );
 
 }
 
@@ -1777,10 +2064,14 @@ function showGift() {
 function openGift() {
 
     const gift =
-        document.querySelector(".gift");
+        document.querySelector(
+            ".gift"
+        );
+
 
     gift.innerHTML =
         "✨🎉✨";
+
 
     gift.style.transform =
         "scale(1.4) rotate(8deg)";
@@ -1789,15 +2080,21 @@ function openGift() {
     setTimeout(() => {
 
         document
-            .getElementById("surprise")
-            .classList.add("show");
+            .getElementById(
+                "surprise"
+            )
+            .classList.add(
+                "show"
+            );
 
     }, 500);
 
 
     createConfetti(150);
 
+
     createHearts(40);
+
 }
 
 
@@ -1809,9 +2106,13 @@ function finalCelebration() {
 
     createConfetti(250);
 
+
     createHearts(60);
 
-    reveal("finalSection");
+
+    reveal(
+        "finalSection"
+    );
 
 }
 
@@ -1823,6 +2124,7 @@ function finalCelebration() {
 function createHearts(number) {
 
     const symbols = [
+
         "❤️",
         "💕",
         "💖",
@@ -1830,14 +2132,26 @@ function createHearts(number) {
         "💓",
         "🌸",
         "✨"
+
     ];
 
-    for (let i = 0; i < number; i++) {
+
+    for (
+        let i = 0;
+        i < number;
+        i++
+    ) {
+
 
         const heart =
-            document.createElement("div");
+            document.createElement(
+                "div"
+            );
 
-        heart.className = "heart";
+
+        heart.className =
+            "heart";
+
 
         heart.innerHTML =
             symbols[
@@ -1847,26 +2161,47 @@ function createHearts(number) {
                 )
             ];
 
+
         heart.style.left =
-            Math.random() * 100 + "vw";
+            Math.random() *
+            100 +
+            "vw";
+
 
         heart.style.fontSize =
-            (15 + Math.random() * 25) + "px";
+            (
+                15 +
+                Math.random() * 25
+            ) +
+            "px";
+
 
         heart.style.animationDuration =
-            (5 + Math.random() * 6) + "s";
+            (
+                5 +
+                Math.random() * 6
+            ) +
+            "s";
+
 
         heart.style.animationDelay =
-            Math.random() * 2 + "s";
+            Math.random() * 2 +
+            "s";
 
-        document.body.appendChild(heart);
+
+        document.body.appendChild(
+            heart
+        );
+
 
         setTimeout(() => {
 
             heart.remove();
 
         }, 12000);
+
     }
+
 }
 
 
@@ -1876,16 +2211,28 @@ function createHearts(number) {
 
 function createConfetti(number) {
 
-    for (let i = 0; i < number; i++) {
+    for (
+        let i = 0;
+        i < number;
+        i++
+    ) {
+
 
         const piece =
-            document.createElement("div");
+            document.createElement(
+                "div"
+            );
+
 
         piece.className =
             "confetti";
 
+
         piece.style.left =
-            Math.random() * 100 + "vw";
+            Math.random() *
+            100 +
+            "vw";
+
 
         piece.style.background =
             `hsl(
@@ -1894,20 +2241,33 @@ function createConfetti(number) {
                 65%
             )`;
 
+
         piece.style.animationDuration =
-            (2 + Math.random() * 3) + "s";
+            (
+                2 +
+                Math.random() * 3
+            ) +
+            "s";
+
 
         piece.style.animationDelay =
-            Math.random() + "s";
+            Math.random() +
+            "s";
 
-        document.body.appendChild(piece);
+
+        document.body.appendChild(
+            piece
+        );
+
 
         setTimeout(() => {
 
             piece.remove();
 
         }, 6000);
+
     }
+
 }
 
 
@@ -1915,7 +2275,8 @@ function createConfetti(number) {
    MUSIC
 ===================================================== */
 
-let musicPlaying = false;
+let musicPlaying =
+    false;
 
 
 function toggleMusic() {
@@ -1930,13 +2291,15 @@ function toggleMusic() {
 
         music.pause();
 
-        musicPlaying = false;
+        musicPlaying =
+            false;
 
     } else {
 
         music.play();
 
-        musicPlaying = true;
+        musicPlaying =
+            true;
 
     }
 
@@ -1953,8 +2316,10 @@ setInterval(() => {
 
 }, 1800);
 
+
 </script>
 
 </body>
+
 </html>
 ```
