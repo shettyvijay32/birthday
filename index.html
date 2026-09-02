@@ -1,11 +1,12 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
 <title>Happy Birthday Punnu ❤️</title>
 
@@ -26,9 +27,16 @@ html {
 }
 
 body {
-    font-family: "Trebuchet MS", Arial, sans-serif;
+
+    font-family:
+        "Trebuchet MS",
+        Arial,
+        sans-serif;
+
     background: #12091c;
+
     color: white;
+
     overflow-x: hidden;
 }
 
@@ -38,14 +46,32 @@ body {
 ===================================================== */
 
 body::before {
+
     content: "";
+
     position: fixed;
+
     inset: 0;
 
     background:
-        radial-gradient(circle at 20% 20%, #ff4f8140, transparent 30%),
-        radial-gradient(circle at 80% 30%, #a855f740, transparent 30%),
-        radial-gradient(circle at 50% 90%, #ff8fab30, transparent 35%);
+
+        radial-gradient(
+            circle at 20% 20%,
+            #ff4f8140,
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 80% 30%,
+            #a855f740,
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 50% 90%,
+            #ff8fab30,
+            transparent 35%
+        );
 
     z-index: -3;
 }
@@ -56,36 +82,49 @@ body::before {
 ===================================================== */
 
 #stars {
+
     position: fixed;
+
     inset: 0;
+
     pointer-events: none;
+
     z-index: -2;
 }
 
 .star {
+
     position: absolute;
 
     width: 3px;
+
     height: 3px;
 
     background: white;
+
     border-radius: 50%;
 
-    animation: twinkle 2s infinite alternate;
+    animation:
+        twinkle 2s infinite alternate;
 }
 
 @keyframes twinkle {
 
     from {
+
         opacity: 0.15;
-        transform: scale(0.5);
+
+        transform:
+            scale(0.5);
     }
 
     to {
-        opacity: 1;
-        transform: scale(1.5);
-    }
 
+        opacity: 1;
+
+        transform:
+            scale(1.5);
+    }
 }
 
 
@@ -94,12 +133,15 @@ body::before {
 ===================================================== */
 
 .heart {
+
     position: fixed;
+
     bottom: -50px;
 
     pointer-events: none;
 
-    animation: heartFloat linear forwards;
+    animation:
+        heartFloat linear forwards;
 
     z-index: 1;
 }
@@ -107,6 +149,7 @@ body::before {
 @keyframes heartFloat {
 
     0% {
+
         transform:
             translateY(0)
             scale(0.5)
@@ -116,6 +159,7 @@ body::before {
     }
 
     15% {
+
         opacity: 1;
     }
 
@@ -128,7 +172,6 @@ body::before {
 
         opacity: 0;
     }
-
 }
 
 
@@ -163,6 +206,7 @@ section {
 }
 
 .hidden {
+
     display: none !important;
 }
 
@@ -174,6 +218,7 @@ section {
 .hero {
 
     background:
+
         linear-gradient(
             rgba(18,9,28,0.35),
             rgba(18,9,28,0.8)
@@ -181,6 +226,8 @@ section {
 }
 
 .badge {
+
+    display: inline-block;
 
     padding: 10px 20px;
 
@@ -192,7 +239,8 @@ section {
     background:
         rgba(255,255,255,0.08);
 
-    backdrop-filter: blur(10px);
+    backdrop-filter:
+        blur(10px);
 
     font-size: 0.9rem;
 
@@ -200,7 +248,6 @@ section {
 
     margin-bottom: 30px;
 }
-
 
 .hero h1 {
 
@@ -212,14 +259,16 @@ section {
     margin-bottom: 25px;
 
     text-shadow:
+
         0 0 20px #ff6b9d80,
+
         0 10px 40px #00000080;
 }
-
 
 .punnu {
 
     background:
+
         linear-gradient(
             90deg,
             #ff8fab,
@@ -231,6 +280,7 @@ section {
     background-size: 300%;
 
     -webkit-background-clip: text;
+
     background-clip: text;
 
     color: transparent;
@@ -242,19 +292,20 @@ section {
 @keyframes gradientMove {
 
     0% {
+
         background-position: 0%;
     }
 
     50% {
+
         background-position: 100%;
     }
 
     100% {
+
         background-position: 0%;
     }
-
 }
-
 
 .hero-subtitle {
 
@@ -266,7 +317,8 @@ section {
 
     color: #f5dce8;
 
-    margin-bottom: 35px;
+    margin:
+        0 auto 35px;
 }
 
 
@@ -330,7 +382,8 @@ section {
     border:
         1px solid rgba(255,255,255,0.15);
 
-    backdrop-filter: blur(15px);
+    backdrop-filter:
+        blur(15px);
 
     box-shadow:
         0 25px 70px
@@ -508,7 +561,8 @@ section {
     background:
         rgba(255,255,255,0.08);
 
-    backdrop-filter: blur(10px);
+    backdrop-filter:
+        blur(10px);
 
     text-align: left;
 
@@ -541,7 +595,7 @@ section {
 
 
 /* =====================================================
-   PHOTO GALLERY
+   PHOTO SECTION
 ===================================================== */
 
 .photo-grid {
@@ -556,24 +610,22 @@ section {
     width: 100%;
 
     max-width: 750px;
+
+    margin: auto;
 }
-
-
-/* PHOTO CARD */
 
 .photo {
 
-    min-height: 300px;
+    height: 350px;
 
     border-radius: 30px;
 
-    display: flex;
+    overflow: hidden;
 
-    justify-content: center;
-
-    align-items: center;
+    position: relative;
 
     background:
+
         linear-gradient(
             135deg,
             #ff6b9d30,
@@ -583,10 +635,6 @@ section {
     border:
         1px solid rgba(255,255,255,0.15);
 
-    overflow: hidden;
-
-    position: relative;
-
     box-shadow:
         0 20px 50px
         rgba(0,0,0,0.3);
@@ -594,29 +642,19 @@ section {
     transition: 0.5s;
 }
 
-
-/* PHOTO IMAGE */
-
 .photo img {
 
     width: 100%;
 
     height: 100%;
 
-    min-height: 300px;
-
-    object-fit: cover;
-
     display: block;
 
-    border-radius: 30px;
+    object-fit: cover;
 
     transition:
         transform 0.5s ease;
 }
-
-
-/* PHOTO HOVER */
 
 .photo:hover {
 
@@ -668,6 +706,7 @@ section {
     border-radius: 20px;
 
     background:
+
         linear-gradient(
             #ff9fba,
             #ff4f81
@@ -713,14 +752,17 @@ section {
 }
 
 .candle:nth-child(1) {
+
     left: 75px;
 }
 
 .candle:nth-child(2) {
+
     left: 118px;
 }
 
 .candle:nth-child(3) {
+
     left: 161px;
 }
 
@@ -763,7 +805,6 @@ section {
             rotate(-45deg)
             scale(1.2);
     }
-
 }
 
 
@@ -802,7 +843,8 @@ section {
 
     opacity: 0;
 
-    transform: scale(0.5);
+    transform:
+        scale(0.5);
 
     transition: 0.8s;
 }
@@ -811,7 +853,8 @@ section {
 
     opacity: 1;
 
-    transform: scale(1);
+    transform:
+        scale(1);
 }
 
 
@@ -837,13 +880,16 @@ section {
 @keyframes heartbeat {
 
     0%,100% {
-        transform: scale(1);
+
+        transform:
+            scale(1);
     }
 
     50% {
-        transform: scale(1.2);
-    }
 
+        transform:
+            scale(1.2);
+    }
 }
 
 .final h1 {
@@ -863,6 +909,10 @@ section {
     font-size: 1.15rem;
 
     line-height: 1.8;
+
+    margin-left: auto;
+
+    margin-right: auto;
 }
 
 
@@ -897,7 +947,6 @@ section {
             translateY(110vh)
             rotate(720deg);
     }
-
 }
 
 
@@ -925,7 +974,8 @@ section {
     background:
         rgba(255,255,255,0.1);
 
-    backdrop-filter: blur(10px);
+    backdrop-filter:
+        blur(10px);
 
     color: white;
 
@@ -941,7 +991,7 @@ section {
    MOBILE
 ===================================================== */
 
-@media(max-width: 700px) {
+@media(max-width:700px) {
 
     .qualities {
 
@@ -954,6 +1004,11 @@ section {
         grid-template-columns: 1fr;
     }
 
+    .photo {
+
+        height: 400px;
+    }
+
     .timeline::before {
 
         left: 10px;
@@ -964,25 +1019,25 @@ section {
         width:
             calc(100% - 35px);
 
-        margin-left: 35px !important;
+        margin-left:
+            35px !important;
 
         margin-right: 0 !important;
     }
 
     .card {
 
-        padding: 28px 22px;
+        padding:
+            28px 22px;
     }
 
     .letter::before {
 
         display: none;
     }
-
 }
 
-
-@media(max-width: 450px) {
+@media(max-width:450px) {
 
     .qualities {
 
@@ -994,25 +1049,10 @@ section {
         font-size: 4rem;
     }
 
-}
-
-
-/* =====================================================
-   MOBILE PHOTO SIZE
-===================================================== */
-
-@media(max-width: 700px) {
-
     .photo {
 
-        min-height: 350px;
+        height: 380px;
     }
-
-    .photo img {
-
-        min-height: 350px;
-    }
-
 }
 
 </style>
@@ -1060,7 +1100,7 @@ section {
 
             Today is not just your birthday...
 
-            <br>
+            <br><br>
 
             It's a celebration of the beautiful,
             cute, energetic and wonderful person
@@ -1112,14 +1152,12 @@ section {
                 My dearest Punnu,
             </p>
 
-
             <p>
 
                 Today is your special day, and I just want
                 you to know how incredibly special you are.
 
             </p>
-
 
             <p>
 
@@ -1130,7 +1168,6 @@ section {
 
             </p>
 
-
             <p>
 
                 You are cute in ways you probably don't even
@@ -1140,14 +1177,12 @@ section {
 
             </p>
 
-
             <p>
 
                 I hope this birthday brings you everything
                 that makes your heart happy.
 
             </p>
-
 
             <p>
 
@@ -1158,7 +1193,6 @@ section {
 
             </p>
 
-
             <p>
 
                 And most importantly...
@@ -1168,7 +1202,6 @@ section {
                 </strong>
 
             </p>
-
 
             <p style="text-align:right">
 
@@ -1457,7 +1490,7 @@ section {
 
         <p class="section-subtitle">
 
-            A few beautiful memories of Punnu ❤️
+            Some beautiful memories of Punnu ❤️
 
         </p>
 
@@ -1465,24 +1498,30 @@ section {
         <div class="photo-grid">
 
 
-            <!-- PHOTO 1 -->
+            <!-- =========================================
+                 PHOTO 1
+            ========================================== -->
 
             <div class="photo">
 
                 <img
-                    src="photo1.jpg.png"
-                    alt="Punnu Birthday Memory 1">
+                    src="photos/photo1.jpg.png"
+                    alt="Punnu Birthday Memory 1"
+                    loading="lazy">
 
             </div>
 
 
-            <!-- PHOTO 2 -->
+            <!-- =========================================
+                 PHOTO 2
+            ========================================== -->
 
             <div class="photo">
 
                 <img
-                    src="photo2.jpg.png"
-                    alt="Punnu Birthday Memory 2">
+                    src="photos/photo2.jpg.png"
+                    alt="Punnu Birthday Memory 2"
+                    loading="lazy">
 
             </div>
 
@@ -1637,7 +1676,9 @@ section {
             <div class="card">
 
                 <h2>
+
                     ✨ Surprise! ✨
+
                 </h2>
 
 
@@ -1645,7 +1686,9 @@ section {
 
 
                 <p>
+
                     Punnu...
+
                 </p>
 
 
@@ -1718,7 +1761,6 @@ section {
                 🎉 One Last Thing...
 
             </button>
-
 
         </div>
 
@@ -1805,7 +1847,6 @@ section {
 
         </p>
 
-
     </div>
 
 </section>
@@ -1847,7 +1888,11 @@ const stars =
     document.getElementById("stars");
 
 
-for (let i = 0; i < 120; i++) {
+for (
+    let i = 0;
+    i < 120;
+    i++
+) {
 
     const star =
         document.createElement("div");
@@ -1884,7 +1929,9 @@ function reveal(id) {
         document.getElementById(id);
 
 
-    section.classList.remove("hidden");
+    section.classList.remove(
+        "hidden"
+    );
 
 
     setTimeout(() => {
@@ -1909,27 +1956,30 @@ function startSurprise() {
     createHearts(20);
 
 
-    reveal("letterSection");
+    reveal(
+        "letterSection"
+    );
 
 
-    try {
-
-        const music =
-            document.getElementById(
-                "birthdayMusic"
-            );
-
-
-        music.play();
-
-
-    } catch (error) {
-
-        console.log(
-            "Music needs user interaction."
+    const music =
+        document.getElementById(
+            "birthdayMusic"
         );
 
-    }
+
+    music.play()
+        .then(() => {
+
+            musicPlaying = true;
+
+        })
+        .catch(() => {
+
+            console.log(
+                "Music needs user interaction."
+            );
+
+        });
 
 }
 
@@ -2000,12 +2050,14 @@ function blowCandles() {
         );
 
 
-    flames.forEach(flame => {
+    flames.forEach(
+        flame => {
 
-        flame.style.display =
-            "none";
+            flame.style.display =
+                "none";
 
-    });
+        }
+    );
 
 
     createConfetti(100);
@@ -2092,7 +2144,6 @@ function openGift() {
 
     createConfetti(150);
 
-
     createHearts(40);
 
 }
@@ -2105,7 +2156,6 @@ function openGift() {
 function finalCelebration() {
 
     createConfetti(250);
-
 
     createHearts(60);
 
@@ -2142,7 +2192,6 @@ function createHearts(number) {
         i++
     ) {
 
-
         const heart =
             document.createElement(
                 "div"
@@ -2163,8 +2212,7 @@ function createHearts(number) {
 
 
         heart.style.left =
-            Math.random() *
-            100 +
+            Math.random() * 100 +
             "vw";
 
 
@@ -2172,16 +2220,14 @@ function createHearts(number) {
             (
                 15 +
                 Math.random() * 25
-            ) +
-            "px";
+            ) + "px";
 
 
         heart.style.animationDuration =
             (
                 5 +
                 Math.random() * 6
-            ) +
-            "s";
+            ) + "s";
 
 
         heart.style.animationDelay =
@@ -2217,7 +2263,6 @@ function createConfetti(number) {
         i++
     ) {
 
-
         const piece =
             document.createElement(
                 "div"
@@ -2229,8 +2274,7 @@ function createConfetti(number) {
 
 
         piece.style.left =
-            Math.random() *
-            100 +
+            Math.random() * 100 +
             "vw";
 
 
@@ -2246,13 +2290,11 @@ function createConfetti(number) {
             (
                 2 +
                 Math.random() * 3
-            ) +
-            "s";
+            ) + "s";
 
 
         piece.style.animationDelay =
-            Math.random() +
-            "s";
+            Math.random() + "s";
 
 
         document.body.appendChild(
@@ -2275,8 +2317,7 @@ function createConfetti(number) {
    MUSIC
 ===================================================== */
 
-let musicPlaying =
-    false;
+let musicPlaying = false;
 
 
 function toggleMusic() {
@@ -2291,15 +2332,23 @@ function toggleMusic() {
 
         music.pause();
 
-        musicPlaying =
-            false;
+        musicPlaying = false;
 
     } else {
 
-        music.play();
+        music.play()
+            .then(() => {
 
-        musicPlaying =
-            true;
+                musicPlaying = true;
+
+            })
+            .catch(() => {
+
+                console.log(
+                    "Music could not be played."
+                );
+
+            });
 
     }
 
@@ -2322,4 +2371,3 @@ setInterval(() => {
 </body>
 
 </html>
-```
