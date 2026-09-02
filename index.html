@@ -2,19 +2,16 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
-
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Happy Birthday Punnu ❤️</title>
 
 <style>
 
-/* =====================================================
+/* ==============================
    RESET
-===================================================== */
+============================== */
 
 * {
     margin: 0;
@@ -27,46 +24,32 @@ html {
 }
 
 body {
-
-    font-family:
-        "Trebuchet MS",
-        Arial,
-        sans-serif;
-
+    font-family: "Trebuchet MS", Arial, sans-serif;
     background: #12091c;
-
     color: white;
-
     overflow-x: hidden;
 }
 
-
-/* =====================================================
+/* ==============================
    BACKGROUND
-===================================================== */
+============================== */
 
 body::before {
-
     content: "";
-
     position: fixed;
-
     inset: 0;
 
     background:
-
         radial-gradient(
             circle at 20% 20%,
             #ff4f8140,
             transparent 30%
         ),
-
         radial-gradient(
             circle at 80% 30%,
             #a855f740,
             transparent 30%
         ),
-
         radial-gradient(
             circle at 50% 90%,
             #ff8fab30,
@@ -76,72 +59,50 @@ body::before {
     z-index: -3;
 }
 
-
-/* =====================================================
+/* ==============================
    STARS
-===================================================== */
+============================== */
 
 #stars {
-
     position: fixed;
-
     inset: 0;
-
     pointer-events: none;
-
     z-index: -2;
 }
 
 .star {
-
     position: absolute;
-
     width: 3px;
-
     height: 3px;
-
     background: white;
-
     border-radius: 50%;
 
-    animation:
-        twinkle 2s infinite alternate;
+    animation: twinkle 2s infinite alternate;
 }
 
 @keyframes twinkle {
 
     from {
-
         opacity: 0.15;
-
-        transform:
-            scale(0.5);
+        transform: scale(0.5);
     }
 
     to {
-
         opacity: 1;
-
-        transform:
-            scale(1.5);
+        transform: scale(1.5);
     }
 }
 
-
-/* =====================================================
+/* ==============================
    FLOATING HEARTS
-===================================================== */
+============================== */
 
 .heart {
-
     position: fixed;
-
     bottom: -50px;
-
     pointer-events: none;
 
-    animation:
-        heartFloat linear forwards;
+    animation: heartFloat linear forwards;
 
     z-index: 1;
 }
@@ -149,7 +110,6 @@ body::before {
 @keyframes heartFloat {
 
     0% {
-
         transform:
             translateY(0)
             scale(0.5)
@@ -159,12 +119,10 @@ body::before {
     }
 
     15% {
-
         opacity: 1;
     }
 
     100% {
-
         transform:
             translateY(-110vh)
             scale(1.3)
@@ -174,21 +132,17 @@ body::before {
     }
 }
 
-
-/* =====================================================
+/* ==============================
    GENERAL
-===================================================== */
+============================== */
 
 section {
-
     min-height: 100vh;
 
     padding: 90px 20px;
 
     display: flex;
-
     justify-content: center;
-
     align-items: center;
 
     flex-direction: column;
@@ -197,28 +151,21 @@ section {
 }
 
 .container {
-
     width: 100%;
-
     max-width: 1000px;
-
     margin: auto;
 }
 
 .hidden {
-
     display: none !important;
 }
 
-
-/* =====================================================
+/* ==============================
    HERO
-===================================================== */
+============================== */
 
 .hero {
-
     background:
-
         linear-gradient(
             rgba(18,9,28,0.35),
             rgba(18,9,28,0.8)
@@ -226,7 +173,6 @@ section {
 }
 
 .badge {
-
     display: inline-block;
 
     padding: 10px 20px;
@@ -239,8 +185,7 @@ section {
     background:
         rgba(255,255,255,0.08);
 
-    backdrop-filter:
-        blur(10px);
+    backdrop-filter: blur(10px);
 
     font-size: 0.9rem;
 
@@ -259,16 +204,13 @@ section {
     margin-bottom: 25px;
 
     text-shadow:
-
         0 0 20px #ff6b9d80,
-
         0 10px 40px #00000080;
 }
 
 .punnu {
 
     background:
-
         linear-gradient(
             90deg,
             #ff8fab,
@@ -280,29 +222,24 @@ section {
     background-size: 300%;
 
     -webkit-background-clip: text;
-
     background-clip: text;
 
     color: transparent;
 
-    animation:
-        gradientMove 5s infinite;
+    animation: gradientMove 5s infinite;
 }
 
 @keyframes gradientMove {
 
     0% {
-
         background-position: 0%;
     }
 
     50% {
-
         background-position: 100%;
     }
 
     100% {
-
         background-position: 0%;
     }
 }
@@ -321,10 +258,9 @@ section {
         0 auto 35px;
 }
 
-
-/* =====================================================
+/* ==============================
    BUTTON
-===================================================== */
+============================== */
 
 .btn {
 
@@ -361,10 +297,9 @@ section {
         rgba(255,120,170,0.4);
 }
 
-
-/* =====================================================
-   GLASS CARD
-===================================================== */
+/* ==============================
+   CARD
+============================== */
 
 .card {
 
@@ -382,8 +317,7 @@ section {
     border:
         1px solid rgba(255,255,255,0.15);
 
-    backdrop-filter:
-        blur(15px);
+    backdrop-filter: blur(15px);
 
     box-shadow:
         0 25px 70px
@@ -399,10 +333,9 @@ section {
     color: #f9e8ef;
 }
 
-
-/* =====================================================
+/* ==============================
    SECTION TITLE
-===================================================== */
+============================== */
 
 .section-title {
 
@@ -421,10 +354,9 @@ section {
     font-size: 1.05rem;
 }
 
-
-/* =====================================================
+/* ==============================
    LOVE LETTER
-===================================================== */
+============================== */
 
 .letter {
 
@@ -447,14 +379,12 @@ section {
 }
 
 .letter p {
-
     margin-bottom: 20px;
 }
 
-
-/* =====================================================
+/* ==============================
    QUALITIES
-===================================================== */
+============================== */
 
 .qualities {
 
@@ -503,7 +433,6 @@ section {
 }
 
 .quality h3 {
-
     margin-bottom: 10px;
 }
 
@@ -516,10 +445,9 @@ section {
     line-height: 1.5;
 }
 
-
-/* =====================================================
-   MEMORY TIMELINE
-===================================================== */
+/* ==============================
+   TIMELINE
+============================== */
 
 .timeline {
 
@@ -539,7 +467,6 @@ section {
     left: 50%;
 
     top: 0;
-
     bottom: 0;
 
     width: 2px;
@@ -561,8 +488,7 @@ section {
     background:
         rgba(255,255,255,0.08);
 
-    backdrop-filter:
-        blur(10px);
+    backdrop-filter: blur(10px);
 
     text-align: left;
 
@@ -570,12 +496,10 @@ section {
 }
 
 .memory:nth-child(odd) {
-
     margin-right: auto;
 }
 
 .memory:nth-child(even) {
-
     margin-left: auto;
 }
 
@@ -593,30 +517,32 @@ section {
     line-height: 1.6;
 }
 
-
-/* =====================================================
+/* ==================================================
    PHOTO SECTION
-===================================================== */
+   FULL PHOTO - NO CROPPING
+================================================== */
 
 .photo-grid {
 
     display: grid;
 
     grid-template-columns:
-        repeat(2, 1fr);
+        repeat(2, minmax(0, 1fr));
 
-    gap: 20px;
+    gap: 25px;
 
     width: 100%;
 
-    max-width: 750px;
+    max-width: 900px;
 
     margin: auto;
+
+    align-items: start;
 }
 
 .photo {
 
-    height: 350px;
+    width: 100%;
 
     border-radius: 30px;
 
@@ -624,13 +550,7 @@ section {
 
     position: relative;
 
-    background:
-
-        linear-gradient(
-            135deg,
-            #ff6b9d30,
-            #a855f730
-        );
+    background: #100b16;
 
     border:
         1px solid rgba(255,255,255,0.15);
@@ -639,46 +559,63 @@ section {
         0 20px 50px
         rgba(0,0,0,0.3);
 
-    transition: 0.5s;
+    transition: 0.4s;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
 }
+
+/*
+    IMPORTANT:
+
+    Do NOT use:
+        height: 350px;
+        object-fit: cover;
+
+    because that crops your photos.
+
+    Instead the image keeps its natural aspect ratio.
+*/
 
 .photo img {
 
-    width: 100%;
-
-    height: 100%;
-
     display: block;
 
-    object-fit: cover;
+    width: 100%;
 
-    transition:
-        transform 0.5s ease;
+    height: auto;
+
+    max-width: 100%;
+
+    object-fit: contain;
+
+    object-position: center;
+
+    transition: 0.4s;
 }
 
 .photo:hover {
 
-    transform:
-        translateY(-8px);
+    transform: translateY(-8px);
 
     box-shadow:
         0 30px 60px
         rgba(0,0,0,0.45);
 }
 
-.photo:hover img {
+/*
+   Do not zoom the image on hover.
+   This keeps the complete photo visible.
+*/
 
-    transform:
-        scale(1.08);
-}
-
-
-/* =====================================================
+/* ==============================
    CAKE
-===================================================== */
+============================== */
 
 .cake-area {
-
     margin: 40px 0;
 }
 
@@ -706,7 +643,6 @@ section {
     border-radius: 20px;
 
     background:
-
         linear-gradient(
             #ff9fba,
             #ff4f81
@@ -752,17 +688,14 @@ section {
 }
 
 .candle:nth-child(1) {
-
     left: 75px;
 }
 
 .candle:nth-child(2) {
-
     left: 118px;
 }
 
 .candle:nth-child(3) {
-
     left: 161px;
 }
 
@@ -793,24 +726,21 @@ section {
 @keyframes flame {
 
     from {
-
         transform:
             rotate(-45deg)
             scale(1);
     }
 
     to {
-
         transform:
             rotate(-45deg)
             scale(1.2);
     }
 }
 
-
-/* =====================================================
+/* ==============================
    GIFT
-===================================================== */
+============================== */
 
 .gift {
 
@@ -857,10 +787,9 @@ section {
         scale(1);
 }
 
-
-/* =====================================================
+/* ==============================
    FINAL
-===================================================== */
+============================== */
 
 .final {
 
@@ -880,15 +809,11 @@ section {
 @keyframes heartbeat {
 
     0%,100% {
-
-        transform:
-            scale(1);
+        transform: scale(1);
     }
 
     50% {
-
-        transform:
-            scale(1.2);
+        transform: scale(1.2);
     }
 }
 
@@ -915,10 +840,9 @@ section {
     margin-right: auto;
 }
 
-
-/* =====================================================
+/* ==============================
    CONFETTI
-===================================================== */
+============================== */
 
 .confetti {
 
@@ -949,10 +873,9 @@ section {
     }
 }
 
-
-/* =====================================================
-   MUSIC BUTTON
-===================================================== */
+/* ==============================
+   MUSIC
+============================== */
 
 .music-button {
 
@@ -974,8 +897,7 @@ section {
     background:
         rgba(255,255,255,0.1);
 
-    backdrop-filter:
-        blur(10px);
+    backdrop-filter: blur(10px);
 
     color: white;
 
@@ -986,12 +908,17 @@ section {
     font-size: 1.2rem;
 }
 
-
-/* =====================================================
+/* ==============================
    MOBILE
-===================================================== */
+============================== */
 
-@media(max-width:700px) {
+@media (max-width: 700px) {
+
+    section {
+
+        padding:
+            70px 15px;
+    }
 
     .qualities {
 
@@ -1002,11 +929,31 @@ section {
     .photo-grid {
 
         grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        max-width: 600px;
     }
+
+    /*
+       Image keeps full natural dimensions.
+       No fixed height.
+    */
 
     .photo {
 
-        height: 400px;
+        height: auto;
+
+        min-height: 0;
+    }
+
+    .photo img {
+
+        width: 100%;
+
+        height: auto;
+
+        object-fit: contain;
     }
 
     .timeline::before {
@@ -1032,12 +979,15 @@ section {
     }
 
     .letter::before {
-
         display: none;
     }
 }
 
-@media(max-width:450px) {
+/* ==============================
+   SMALL MOBILE
+============================== */
+
+@media (max-width: 450px) {
 
     .qualities {
 
@@ -1051,39 +1001,42 @@ section {
 
     .photo {
 
-        height: 380px;
+        border-radius: 22px;
+    }
+
+    .photo img {
+
+        width: 100%;
+
+        height: auto;
     }
 }
 
 </style>
-
 </head>
 
 
 <body>
 
 
-<!-- =====================================================
+<!-- ==============================
      STARS
-===================================================== -->
+============================== -->
 
 <div id="stars"></div>
 
 
-<!-- =====================================================
+<!-- ==============================
      HERO
-===================================================== -->
+============================== -->
 
 <section class="hero">
 
     <div class="container">
 
         <div class="badge">
-
             ✨ A SECRET SURPRISE FOR PUNNU ✨
-
         </div>
-
 
         <h1>
 
@@ -1094,7 +1047,6 @@ section {
             </span>
 
         </h1>
-
 
         <p class="hero-subtitle">
 
@@ -1107,7 +1059,6 @@ section {
             you are. 🌸
 
         </p>
-
 
         <button
             class="btn"
@@ -1122,9 +1073,9 @@ section {
 </section>
 
 
-<!-- =====================================================
+<!-- ==============================
      LOVE LETTER
-===================================================== -->
+============================== -->
 
 <section
     id="letterSection"
@@ -1133,18 +1084,12 @@ section {
     <div class="container">
 
         <h2 class="section-title">
-
             💌 A Letter For Punnu
-
         </h2>
 
-
         <p class="section-subtitle">
-
             Written especially for the birthday girl.
-
         </p>
-
 
         <div class="card letter">
 
@@ -1153,59 +1098,47 @@ section {
             </p>
 
             <p>
-
                 Today is your special day, and I just want
                 you to know how incredibly special you are.
-
             </p>
 
             <p>
-
                 You have this amazing energy that can turn
                 an ordinary moment into something memorable.
                 Your smile has a way of making everything
                 feel a little brighter.
-
             </p>
 
             <p>
-
                 You are cute in ways you probably don't even
                 realize, energetic in a way that makes life
                 more exciting, and beautiful because of the
                 person you are inside.
-
             </p>
 
             <p>
-
                 I hope this birthday brings you everything
                 that makes your heart happy.
-
             </p>
 
             <p>
-
                 More laughter.
                 More adventures.
                 More dreams coming true.
                 More unforgettable moments.
-
             </p>
 
             <p>
-
                 And most importantly...
-
                 <strong>
                     never stop being YOU. ❤️
                 </strong>
-
             </p>
 
             <p style="text-align:right">
 
-                Happy Birthday, Punnu! 🌸<br>
+                Happy Birthday, Punnu! 🌸
+                <br>
 
                 With all my love ❤️
 
@@ -1213,9 +1146,7 @@ section {
 
         </div>
 
-
         <br><br>
-
 
         <button
             class="btn"
@@ -1230,9 +1161,9 @@ section {
 </section>
 
 
-<!-- =====================================================
+<!-- ==============================
      QUALITIES
-===================================================== -->
+============================== -->
 
 <section
     id="qualitiesSection"
@@ -1241,16 +1172,11 @@ section {
     <div class="container">
 
         <h2 class="section-title">
-
             🌷 Punnu In Four Words
-
         </h2>
 
-
         <p class="section-subtitle">
-
             Although four words aren't nearly enough...
-
         </p>
 
 
@@ -1268,10 +1194,8 @@ section {
                 </h3>
 
                 <p>
-
                     The kind of cute that makes
                     ordinary moments special.
-
                 </p>
 
             </div>
@@ -1288,10 +1212,8 @@ section {
                 </h3>
 
                 <p>
-
                     Your energy can brighten
                     an entire room.
-
                 </p>
 
             </div>
@@ -1308,10 +1230,8 @@ section {
                 </h3>
 
                 <p>
-
                     Your kindness is one of
                     the things that makes you special.
-
                 </p>
 
             </div>
@@ -1328,10 +1248,8 @@ section {
                 </h3>
 
                 <p>
-
                     There is only one Punnu.
                     And that's pretty amazing.
-
                 </p>
 
             </div>
@@ -1356,9 +1274,9 @@ section {
 </section>
 
 
-<!-- =====================================================
-     TIMELINE
-===================================================== -->
+<!-- ==============================
+     MEMORIES
+============================== -->
 
 <section
     id="memoriesSection"
@@ -1367,11 +1285,8 @@ section {
     <div class="container">
 
         <h2 class="section-title">
-
             📖 Little Moments
-
         </h2>
-
 
         <p class="section-subtitle">
 
@@ -1391,11 +1306,9 @@ section {
                 </h3>
 
                 <p>
-
                     Every beautiful story starts somewhere.
                     And somehow, ours became one of my
                     favorite stories.
-
                 </p>
 
             </div>
@@ -1408,11 +1321,9 @@ section {
                 </h3>
 
                 <p>
-
                     The silly conversations, random jokes,
                     unexpected moments and all the laughter
                     are memories worth keeping.
-
                 </p>
 
             </div>
@@ -1425,11 +1336,9 @@ section {
                 </h3>
 
                 <p>
-
                     Sometimes it isn't the big moments.
                     It's the little things that make
                     everything feel special.
-
                 </p>
 
             </div>
@@ -1442,11 +1351,9 @@ section {
                 </h3>
 
                 <p>
-
                     Today we celebrate YOU —
                     the amazing person who makes life
                     brighter just by being herself.
-
                 </p>
 
             </div>
@@ -1471,9 +1378,9 @@ section {
 </section>
 
 
-<!-- =====================================================
-     PHOTO SECTION
-===================================================== -->
+<!-- ==============================
+     PHOTOS
+============================== -->
 
 <section
     id="photosSection"
@@ -1482,25 +1389,18 @@ section {
     <div class="container">
 
         <h2 class="section-title">
-
             📸 Our Memories
-
         </h2>
 
-
         <p class="section-subtitle">
-
             Some beautiful memories of Punnu ❤️
-
         </p>
 
 
         <div class="photo-grid">
 
 
-            <!-- =========================================
-                 PHOTO 1
-            ========================================== -->
+            <!-- PHOTO 1 -->
 
             <div class="photo">
 
@@ -1512,9 +1412,7 @@ section {
             </div>
 
 
-            <!-- =========================================
-                 PHOTO 2
-            ========================================== -->
+            <!-- PHOTO 2 -->
 
             <div class="photo">
 
@@ -1545,9 +1443,9 @@ section {
 </section>
 
 
-<!-- =====================================================
+<!-- ==============================
      CAKE
-===================================================== -->
+============================== -->
 
 <section
     id="cakeSection"
@@ -1556,11 +1454,8 @@ section {
     <div class="container">
 
         <h2 class="section-title">
-
             🎂 Make A Wish, Punnu!
-
         </h2>
-
 
         <p class="section-subtitle">
 
@@ -1575,22 +1470,25 @@ section {
 
             <div class="cake">
 
-
-                <div class="candle">
-
-                    <div class="flame"></div>
-
-                </div>
-
-
-                <div class="candle">
+                <div
+                    class="candle"
+                    style="left:75px">
 
                     <div class="flame"></div>
 
                 </div>
 
+                <div
+                    class="candle"
+                    style="left:118px">
 
-                <div class="candle">
+                    <div class="flame"></div>
+
+                </div>
+
+                <div
+                    class="candle"
+                    style="left:161px">
 
                     <div class="flame"></div>
 
@@ -1599,9 +1497,7 @@ section {
 
                 <div class="icing"></div>
 
-
                 <div class="cake-body"></div>
-
 
             </div>
 
@@ -1628,9 +1524,9 @@ section {
 </section>
 
 
-<!-- =====================================================
+<!-- ==============================
      GIFT
-===================================================== -->
+============================== -->
 
 <section
     id="giftSection"
@@ -1639,16 +1535,11 @@ section {
     <div class="container">
 
         <h2 class="section-title">
-
             🎁 Your Final Surprise
-
         </h2>
 
-
         <p class="gift-text">
-
             There is something waiting for you...
-
         </p>
 
 
@@ -1662,9 +1553,7 @@ section {
 
 
         <p class="gift-text">
-
             Tap the gift ❤️
-
         </p>
 
 
@@ -1672,80 +1561,53 @@ section {
             class="surprise"
             id="surprise">
 
-
             <div class="card">
 
                 <h2>
-
                     ✨ Surprise! ✨
-
                 </h2>
 
-
                 <br>
 
-
                 <p>
-
                     Punnu...
-
                 </p>
 
-
                 <br>
 
-
                 <p>
-
                     If happiness had a name,
                     I'd probably call it Punnu.
-
                 </p>
-
 
                 <br>
 
-
                 <p>
-
                     If laughter had a sound,
                     I'd recognize yours anywhere.
-
                 </p>
-
 
                 <br>
 
-
                 <p>
-
                     And if I could give you one gift
                     that lasts forever...
-
                 </p>
-
 
                 <br>
 
-
                 <p>
-
                     I'd give you a lifetime full of
                     beautiful moments,
                     exciting adventures,
                     endless laughter,
                     and reasons to smile.
-
                 </p>
-
 
                 <br>
 
-
                 <h2>
-
                     Happy Birthday, Punnu ❤️
-
                 </h2>
 
             </div>
@@ -1769,9 +1631,9 @@ section {
 </section>
 
 
-<!-- =====================================================
+<!-- ==============================
      FINAL
-===================================================== -->
+============================== -->
 
 <section
     id="finalSection"
@@ -1781,9 +1643,7 @@ section {
 
 
         <div class="big-heart">
-
             ❤️
-
         </div>
 
 
@@ -1792,9 +1652,7 @@ section {
             Happy Birthday
 
             <span class="punnu">
-
                 Punnu
-
             </span>
 
             ❤️
@@ -1842,9 +1700,7 @@ section {
 
 
         <p>
-
             🎂 Happy Birthday, Punnu! 🎂
-
         </p>
 
     </div>
@@ -1852,9 +1708,9 @@ section {
 </section>
 
 
-<!-- =====================================================
+<!-- ==============================
      MUSIC
-===================================================== -->
+============================== -->
 
 <audio
     id="birthdayMusic"
@@ -1879,10 +1735,9 @@ section {
 
 <script>
 
-
-/* =====================================================
+/* ==============================
    STARS
-===================================================== */
+============================== */
 
 const stars =
     document.getElementById("stars");
@@ -1897,75 +1752,57 @@ for (
     const star =
         document.createElement("div");
 
-
-    star.className =
-        "star";
-
+    star.className = "star";
 
     star.style.left =
         Math.random() * 100 + "%";
 
-
     star.style.top =
         Math.random() * 100 + "%";
-
 
     star.style.animationDelay =
         Math.random() * 3 + "s";
 
-
     stars.appendChild(star);
-
 }
 
 
-/* =====================================================
+/* ==============================
    SECTION REVEAL
-===================================================== */
+============================== */
 
 function reveal(id) {
 
     const section =
         document.getElementById(id);
 
-
-    section.classList.remove(
-        "hidden"
-    );
-
+    section.classList.remove("hidden");
 
     setTimeout(() => {
 
         section.scrollIntoView({
-
             behavior: "smooth"
-
         });
 
     }, 100);
-
 }
 
 
-/* =====================================================
+/* ==============================
    START
-===================================================== */
+============================== */
 
 function startSurprise() {
 
     createHearts(20);
 
-
-    reveal(
-        "letterSection"
-    );
+    reveal("letterSection");
 
 
     const music =
         document.getElementById(
             "birthdayMusic"
         );
-
 
     music.play()
         .then(() => {
@@ -1980,13 +1817,12 @@ function startSurprise() {
             );
 
         });
-
 }
 
 
-/* =====================================================
+/* ==============================
    QUALITIES
-===================================================== */
+============================== */
 
 function showQualities() {
 
@@ -1994,41 +1830,37 @@ function showQualities() {
         "qualitiesSection"
     );
 
-
     createHearts(15);
-
 }
 
 
-/* =====================================================
+/* ==============================
    MEMORIES
-===================================================== */
+============================== */
 
 function showMemories() {
 
     reveal(
         "memoriesSection"
     );
-
 }
 
 
-/* =====================================================
+/* ==============================
    PHOTOS
-===================================================== */
+============================== */
 
 function showPhotos() {
 
     reveal(
         "photosSection"
     );
-
 }
 
 
-/* =====================================================
+/* ==============================
    CAKE
-===================================================== */
+============================== */
 
 function showCake() {
 
@@ -2036,9 +1868,7 @@ function showCake() {
         "cakeSection"
     );
 
-
     createConfetti(30);
-
 }
 
 
@@ -2048,7 +1878,6 @@ function blowCandles() {
         document.querySelectorAll(
             ".flame"
         );
-
 
     flames.forEach(
         flame => {
@@ -2096,20 +1925,18 @@ function blowCandles() {
         </div>
 
     `;
-
 }
 
 
-/* =====================================================
+/* ==============================
    GIFT
-===================================================== */
+============================== */
 
 function showGift() {
 
     reveal(
         "giftSection"
     );
-
 }
 
 
@@ -2145,13 +1972,12 @@ function openGift() {
     createConfetti(150);
 
     createHearts(40);
-
 }
 
 
-/* =====================================================
+/* ==============================
    FINAL
-===================================================== */
+============================== */
 
 function finalCelebration() {
 
@@ -2163,13 +1989,12 @@ function finalCelebration() {
     reveal(
         "finalSection"
     );
-
 }
 
 
-/* =====================================================
+/* ==============================
    FLOATING HEARTS
-===================================================== */
+============================== */
 
 function createHearts(number) {
 
@@ -2247,13 +2072,12 @@ function createHearts(number) {
         }, 12000);
 
     }
-
 }
 
 
-/* =====================================================
+/* ==============================
    CONFETTI
-===================================================== */
+============================== */
 
 function createConfetti(number) {
 
@@ -2309,13 +2133,12 @@ function createConfetti(number) {
         }, 6000);
 
     }
-
 }
 
 
-/* =====================================================
+/* ==============================
    MUSIC
-===================================================== */
+============================== */
 
 let musicPlaying = false;
 
@@ -2351,13 +2174,12 @@ function toggleMusic() {
             });
 
     }
-
 }
 
 
-/* =====================================================
+/* ==============================
    AUTOMATIC HEARTS
-===================================================== */
+============================== */
 
 setInterval(() => {
 
@@ -2365,9 +2187,7 @@ setInterval(() => {
 
 }, 1800);
 
-
 </script>
 
 </body>
-
 </html>
