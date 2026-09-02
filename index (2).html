@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Punnu ❤️</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+    font-family:"Trebuchet MS",Arial,sans-serif;
+    background:#12091c;color:white;overflow-x:hidden
+}
+body::before{
+    content:"";position:fixed;inset:0;z-index:-3;
+    background:
+      radial-gradient(circle at 20% 20%,#ff4f8140,transparent 30%),
+      radial-gradient(circle at 80% 30%,#a855f740,transparent 30%),
+      radial-gradient(circle at 50% 90%,#ff8fab30,transparent 35%);
+}
+#stars{position:fixed;inset:0;pointer-events:none;z-index:-2}
+.star{
+    position:absolute;width:3px;height:3px;background:white;border-radius:50%;
+    animation:twinkle 2s infinite alternate
+}
+@keyframes twinkle{
+    from{opacity:.15;transform:scale(.5)}
+    to{opacity:1;transform:scale(1.5)}
+}
+.heart{
+    position:fixed;bottom:-50px;pointer-events:none;z-index:1;
+    animation:heartFloat linear forwards
+}
+@keyframes heartFloat{
+    0%{transform:translateY(0) scale(.5) rotate(0);opacity:0}
+    15%{opacity:1}
+    100%{transform:translateY(-110vh) scale(1.3) rotate(25deg);opacity:0}
+}
+section{
+    min-height:100vh;padding:90px 20px;display:flex;
+    justify-content:center;align-items:center;flex-direction:column;text-align:center
+}
+.container{width:100%;max-width:1000px;margin:auto}
+.hidden{display:none!important}
+
+.hero{background:linear-gradient(rgba(18,9,28,.35),rgba(18,9,28,.8))}
+.badge{
+    display:inline-block;padding:10px 20px;border:1px solid #ffffff4d;
+    border-radius:50px;background:#ffffff14;backdrop-filter:blur(10px);
+    font-size:.9rem;letter-spacing:2px;margin-bottom:30px
+}
+.hero h1{
+    font-size:clamp(3.5rem,12vw,8rem);line-height:.95;margin-bottom:25px;
+    text-shadow:0 0 20px #ff6b9d80,0 10px 40px #00000080
+}
+.punnu{
+    background:linear-gradient(90deg,#ff8fab,#ffd6e5,#c4b5fd,#ff8fab);
+    background-size:300%;-webkit-background-clip:text;background-clip:text;
+    color:transparent;animation:gradientMove 5s infinite
+}
+@keyframes gradientMove{
+    0%{background-position:0%}50%{background-position:100%}100%{background-position:0%}
+}
+.hero-subtitle{
+    max-width:650px;font-size:1.2rem;line-height:1.8;color:#f5dce8;
+    margin:0 auto 35px
+}
+.btn{
+    border:none;padding:16px 30px;border-radius:50px;background:white;color:#c23869;
+    font-size:1rem;font-weight:bold;cursor:pointer;
+    box-shadow:0 10px 30px #00000059;transition:.3s
+}
+.btn:hover{transform:translateY(-5px) scale(1.05);box-shadow:0 15px 40px #ff78aa66}
+.card{
+    width:100%;max-width:760px;padding:40px;border-radius:35px;
+    background:#ffffff14;border:1px solid #ffffff26;backdrop-filter:blur(15px);
+    box-shadow:0 25px 70px #00000059
+}
+.card p{font-size:1.1rem;line-height:2;color:#f9e8ef}
+.section-title{font-size:clamp(2.5rem,7vw,4.5rem);margin-bottom:15px}
+.section-subtitle{color:#d9bccc;margin-bottom:45px;font-size:1.05rem}
+.letter{text-align:left;position:relative}
+.letter::before{
+    content:"💌";position:absolute;font-size:4rem;right:20px;top:-70px
+}
+.letter p{margin-bottom:20px}
+
+.qualities{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:18px;width:100%
+}
+.quality{
+    padding:30px 15px;border-radius:25px;background:#ffffff12;
+    border:1px solid #ffffff1a;transition:.4s
+}
+.quality:hover{transform:translateY(-10px) rotate(2deg);background:#ffffff21}
+.quality .emoji{display:block;font-size:3rem;margin-bottom:15px}
+.quality h3{margin-bottom:10px}
+.quality p{font-size:.9rem;color:#d9c4cf;line-height:1.5}
+
+.timeline{width:100%;max-width:750px;position:relative}
+.timeline::before{
+    content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;background:#ffffff33
+}
+.memory{
+    width:46%;padding:25px;margin-bottom:35px;border-radius:25px;
+    background:#ffffff14;backdrop-filter:blur(10px);text-align:left;position:relative
+}
+.memory:nth-child(odd){margin-right:auto}
+.memory:nth-child(even){margin-left:auto}
+.memory h3{color:#ffabc5;margin-bottom:10px}
+.memory p{color:#dfcad4;line-height:1.6}
+
+/* =========================
+   16:9 PHOTO GALLERY
+   ========================= */
+.photo-grid{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:25px;
+    width:100%;
+    max-width:900px;
+    margin:auto
+}
+.photo{
+    width:100%;
+    aspect-ratio:16/9;
+    border-radius:30px;
+    overflow:hidden;
+    position:relative;
+    background:#100b16;
+    border:1px solid #ffffff26;
+    box-shadow:0 20px 50px #0000004d;
+    transition:.4s;
+    display:flex;
+    justify-content:center;
+    align-items:center
+}
+/*
+   16:9 frame + contain:
+   The complete photo remains visible and is never cropped.
+*/
+.photo img{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:contain;
+    object-position:center
+}
+.photo:hover{
+    transform:translateY(-8px);
+    box-shadow:0 30px 60px #00000073
+}
+
+.cake-area{margin:40px 0}
+.cake{position:relative;width:250px;height:190px;margin:auto}
+.cake-body{
+    position:absolute;bottom:0;width:250px;height:110px;border-radius:20px;
+    background:linear-gradient(#ff9fba,#ff4f81);box-shadow:0 20px 40px #0000004d
+}
+.icing{
+    position:absolute;top:55px;width:250px;height:40px;border-radius:25px;
+    background:white;z-index:3
+}
+.candle{
+    position:absolute;top:0;width:14px;height:60px;background:#ffd166;
+    border-radius:5px;z-index:5
+}
+.candle:nth-child(1){left:75px}.candle:nth-child(2){left:118px}.candle:nth-child(3){left:161px}
+.flame{
+    position:absolute;width:18px;height:25px;background:#ffcc66;
+    border-radius:50% 50% 50% 0;transform:rotate(-45deg);
+    top:-22px;left:-2px;animation:flame .5s infinite alternate
+}
+@keyframes flame{
+    from{transform:rotate(-45deg) scale(1)}
+    to{transform:rotate(-45deg) scale(1.2)}
+}
+.gift{
+    font-size:8rem;cursor:pointer;transition:.5s;user-select:none
+}
+.gift:hover{transform:scale(1.15) rotate(5deg)}
+.gift-text{color:#cdb7c3;margin-bottom:25px}
+.surprise{max-width:700px;opacity:0;transform:scale(.5);transition:.8s}
+.surprise.show{opacity:1;transform:scale(1)}
+.final{position:relative;overflow:hidden}
+.big-heart{font-size:6rem;animation:heartbeat 1.3s infinite}
+@keyframes heartbeat{
+    0%,100%{transform:scale(1)}50%{transform:scale(1.2)}
+}
+.final h1{font-size:clamp(3rem,10vw,7rem);margin:20px 0}
+.final p{
+    max-width:650px;color:#e7d0da;font-size:1.15rem;line-height:1.8;
+    margin-left:auto;margin-right:auto
+}
+.confetti{
+    position:fixed;width:9px;height:18px;top:-30px;z-index:100;
+    animation:confettiFall 3s linear forwards
+}
+@keyframes confettiFall{
+    to{transform:translateY(110vh) rotate(720deg)}
+}
+.music-button{
+    position:fixed;right:20px;bottom:20px;width:55px;height:55px;
+    border-radius:50%;border:1px solid #ffffff33;background:#ffffff1a;
+    backdrop-filter:blur(10px);color:white;cursor:pointer;z-index:50;font-size:1.2rem
+}
+
+@media(max-width:700px){
+    section{padding:70px 15px}
+    .qualities{grid-template-columns:repeat(2,1fr)}
+    .photo-grid{grid-template-columns:1fr;gap:25px;max-width:600px}
+    .photo{aspect-ratio:16/9;height:auto}
+    .photo img{width:100%;height:100%;object-fit:contain}
+    .timeline::before{left:10px}
+    .memory{
+        width:calc(100% - 35px);margin-left:35px!important;margin-right:0!important
+    }
+    .card{padding:28px 22px}
+    .letter::before{display:none}
+}
+@media(max-width:450px){
+    .qualities{grid-template-columns:1fr}
+    .hero h1{font-size:4rem}
+    .photo{border-radius:22px}
+}
+</style>
+</head>
+
+<body>
+
+<div id="stars"></div>
+
+<section class="hero">
+<div class="container">
+    <div class="badge">✨ A SECRET SURPRISE FOR PUNNU ✨</div>
+
+    <h1>
+        Happy Birthday<br>
+        <span class="punnu">Punnu ❤️</span>
+    </h1>
+
+    <p class="hero-subtitle">
+        Today is not just your birthday...
+        <br><br>
+        It's a celebration of the beautiful, cute, energetic and wonderful person you are. 🌸
+    </p>
+
+    <button class="btn" onclick="startSurprise()">🎁 Open Your Surprise</button>
+</div>
+</section>
+
+<section id="letterSection" class="hidden">
+<div class="container">
+    <h2 class="section-title">💌 A Letter For Punnu</h2>
+    <p class="section-subtitle">Written especially for the birthday girl.</p>
+
+    <div class="card letter">
+        <p>My dearest Punnu,</p>
+        <p>Today is your special day, and I just want you to know how incredibly special you are.</p>
+        <p>You have this amazing energy that can turn an ordinary moment into something memorable. Your smile has a way of making everything feel a little brighter.</p>
+        <p>You are cute in ways you probably don't even realize, energetic in a way that makes life more exciting, and beautiful because of the person you are inside.</p>
+        <p>I hope this birthday brings you everything that makes your heart happy.</p>
+        <p>More laughter. More adventures. More dreams coming true. More unforgettable moments.</p>
+        <p>And most importantly... <strong>never stop being YOU. ❤️</strong></p>
+        <p style="text-align:right">Happy Birthday, Punnu! 🌸<br>With all my love ❤️</p>
+    </div>
+
+    <br><br>
+    <button class="btn" onclick="showQualities()">✨ Why You're So Special</button>
+</div>
+</section>
+
+<section id="qualitiesSection" class="hidden">
+<div class="container">
+    <h2 class="section-title">🌷 Punnu In Four Words</h2>
+    <p class="section-subtitle">Although four words aren't nearly enough...</p>
+
+    <div class="qualities">
+        <div class="quality">
+            <span class="emoji">🥰</span>
+            <h3>Super Cute</h3>
+            <p>The kind of cute that makes ordinary moments special.</p>
+        </div>
+        <div class="quality">
+            <span class="emoji">⚡</span>
+            <h3>Full Of Energy</h3>
+            <p>Your energy can brighten an entire room.</p>
+        </div>
+        <div class="quality">
+            <span class="emoji">🌸</span>
+            <h3>Beautiful Heart</h3>
+            <p>Your kindness is one of the things that makes you special.</p>
+        </div>
+        <div class="quality">
+            <span class="emoji">✨</span>
+            <h3>One Of A Kind</h3>
+            <p>There is only one Punnu. And that's pretty amazing.</p>
+        </div>
+    </div>
+
+    <br><br><br>
+    <button class="btn" onclick="showMemories()">📖 Our Little Story</button>
+</div>
+</section>
+
+<section id="memoriesSection" class="hidden">
+<div class="container">
+    <h2 class="section-title">📖 Little Moments</h2>
+    <p class="section-subtitle">Some moments are small... but become the biggest memories.</p>
+
+    <div class="timeline">
+        <div class="memory">
+            <h3>🌸 The Beginning</h3>
+            <p>Every beautiful story starts somewhere. And somehow, ours became one of my favorite stories.</p>
+        </div>
+        <div class="memory">
+            <h3>😂 The Laughs</h3>
+            <p>The silly conversations, random jokes, unexpected moments and all the laughter are memories worth keeping.</p>
+        </div>
+        <div class="memory">
+            <h3>✨ The Little Things</h3>
+            <p>Sometimes it isn't the big moments. It's the little things that make everything feel special.</p>
+        </div>
+        <div class="memory">
+            <h3>❤️ Today</h3>
+            <p>Today we celebrate YOU — the amazing person who makes life brighter just by being herself.</p>
+        </div>
+    </div>
+
+    <br>
+    <button class="btn" onclick="showPhotos()">📸 A Few Memories</button>
+</div>
+</section>
+
+<section id="photosSection" class="hidden">
+<div class="container">
+    <h2 class="section-title">📸 Our Memories</h2>
+    <p class="section-subtitle">Some beautiful memories of Punnu ❤️</p>
+
+    <div class="photo-grid">
+
+        <div class="photo">
+            <img src="photos/photo1.jpg.png"
+                 alt="Punnu Birthday Memory 1" loading="lazy">
+        </div>
+
+        <div class="photo">
+            <img src="photos/photo2.jpg.png"
+                 alt="Punnu Birthday Memory 2" loading="lazy">
+        </div>
+
+        <div class="photo">
+            <img src="photos/photo3.png"
+                 alt="Punnu Birthday Memory 3" loading="lazy">
+        </div>
+
+        <div class="photo">
+            <img src="photos/photo4.png"
+                 alt="Punnu Birthday Memory 4" loading="lazy">
+        </div>
+
+        <div class="photo">
+            <img src="photos/photo5.png"
+                 alt="Punnu Birthday Memory 5" loading="lazy">
+        </div>
+
+        <div class="photo">
+            <img src="photos/photo6.png"
+                 alt="Punnu Birthday Memory 6" loading="lazy">
+        </div>
+
+    </div>
+
+    <br><br>
+    <button class="btn" onclick="showCake()">🎂 One More Surprise</button>
+</div>
+</section>
+
+<section id="cakeSection" class="hidden">
+<div class="container">
+    <h2 class="section-title">🎂 Make A Wish, Punnu!</h2>
+    <p class="section-subtitle">
+        Close your eyes... make a beautiful wish... and blow the candles. ✨
+    </p>
+
+    <div class="cake-area">
+        <div class="cake">
+            <div class="candle" style="left:75px"><div class="flame"></div></div>
+            <div class="candle" style="left:118px"><div class="flame"></div></div>
+            <div class="candle" style="left:161px"><div class="flame"></div></div>
+            <div class="icing"></div>
+            <div class="cake-body"></div>
+        </div>
+    </div>
+
+    <button class="btn" onclick="blowCandles()">💨 Blow Out The Candles</button>
+    <div id="cakeMessage" style="margin-top:30px"></div>
+</div>
+</section>
+
+<section id="giftSection" class="hidden">
+<div class="container">
+    <h2 class="section-title">🎁 Your Final Surprise</h2>
+    <p class="gift-text">There is something waiting for you...</p>
+
+    <div class="gift" onclick="openGift()">🎁</div>
+    <p class="gift-text">Tap the gift ❤️</p>
+
+    <div class="surprise" id="surprise">
+        <div class="card">
+            <h2>✨ Surprise! ✨</h2><br>
+            <p>Punnu...</p><br>
+            <p>If happiness had a name, I'd probably call it Punnu.</p><br>
+            <p>If laughter had a sound, I'd recognize yours anywhere.</p><br>
+            <p>And if I could give you one gift that lasts forever...</p><br>
+            <p>I'd give you a lifetime full of beautiful moments, exciting adventures, endless laughter, and reasons to smile.</p><br>
+            <h2>Happy Birthday, Punnu ❤️</h2>
+        </div>
+
+        <br><br>
+        <button class="btn" onclick="finalCelebration()">🎉 One Last Thing...</button>
+    </div>
+</div>
+</section>
+
+<section id="finalSection" class="hidden final">
+<div class="container">
+    <div class="big-heart">❤️</div>
+
+    <h1>
+        Happy Birthday <span class="punnu">Punnu</span> ❤️
+    </h1>
+
+    <p>Keep smiling. Keep laughing. Keep being energetic. Keep being wonderfully YOU.</p>
+    <br>
+    <p>May this year bring you beautiful surprises, exciting adventures, peaceful moments, big dreams, and countless reasons to smile.</p>
+    <br>
+    <h2>You deserve all the happiness in the world. 🌎❤️</h2>
+    <br><br>
+    <p>🎂 Happy Birthday, Punnu! 🎂</p>
+</div>
+</section>
+
+<audio id="birthdayMusic" loop>
+    <source src="music/birthday.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music-button" onclick="toggleMusic()" title="Music">🎵</button>
+
+<script>
+const stars=document.getElementById("stars");
+
+for(let i=0;i<120;i++){
+    const star=document.createElement("div");
+    star.className="star";
+    star.style.left=Math.random()*100+"%";
+    star.style.top=Math.random()*100+"%";
+    star.style.animationDelay=Math.random()*3+"s";
+    stars.appendChild(star);
+}
+
+let musicPlaying=false;
+
+function reveal(id){
+    const section=document.getElementById(id);
+    section.classList.remove("hidden");
+    setTimeout(()=>{
+        section.scrollIntoView({behavior:"smooth"});
+    },100);
+}
+
+function startSurprise(){
+    createHearts(20);
+    reveal("letterSection");
+
+    const music=document.getElementById("birthdayMusic");
+    music.play().then(()=>{
+        musicPlaying=true;
+    }).catch(()=>{
+        console.log("Music needs user interaction.");
+    });
+}
+
+function showQualities(){
+    reveal("qualitiesSection");
+    createHearts(15);
+}
+
+function showMemories(){
+    reveal("memoriesSection");
+}
+
+function showPhotos(){
+    reveal("photosSection");
+}
+
+function showCake(){
+    reveal("cakeSection");
+}
+
+function blowCandles(){
+    document.querySelectorAll(".flame").forEach(flame=>{
+        flame.style.display="none";
+    });
+
+    document.getElementById("cakeMessage").innerHTML=
+        '<h2 style="color:#ffd6e5">✨ Wish made! May all your dreams come true, Punnu! ❤️</h2>';
+
+    createConfetti(80);
+
+    setTimeout(()=>{
+        reveal("giftSection");
+    },2500);
+}
+
+function openGift(){
+    const surprise=document.getElementById("surprise");
+    surprise.classList.add("show");
+    createHearts(30);
+    createConfetti(100);
+}
+
+function finalCelebration(){
+    reveal("finalSection");
+    createHearts(50);
+    createConfetti(150);
+}
+
+function toggleMusic(){
+    const music=document.getElementById("birthdayMusic");
+
+    if(musicPlaying){
+        music.pause();
+        musicPlaying=false;
+    }else{
+        music.play().then(()=>{
+            musicPlaying=true;
+        }).catch(()=>{});
+    }
+}
+
+function createHearts(count){
+    for(let i=0;i<count;i++){
+        const heart=document.createElement("div");
+        heart.className="heart";
+        heart.innerHTML=["❤️","💕","💖","💗","💓","💘"][Math.floor(Math.random()*6)];
+        heart.style.left=Math.random()*100+"%";
+        heart.style.fontSize=(15+Math.random()*30)+"px";
+        heart.style.animationDuration=(4+Math.random()*5)+"s";
+        heart.style.animationDelay=(Math.random()*2)+"s";
+        document.body.appendChild(heart);
+
+        setTimeout(()=>heart.remove(),10000);
+    }
+}
+
+function createConfetti(count){
+    for(let i=0;i<count;i++){
+        const piece=document.createElement("div");
+        piece.className="confetti";
+        piece.style.left=Math.random()*100+"%";
+        piece.style.background=
+            ["#ff6b9d","#ffd166","#c4b5fd","#6ee7b7","#60a5fa","#ffffff"]
+            [Math.floor(Math.random()*6)];
+        piece.style.animationDelay=(Math.random()*1.5)+"s";
+        piece.style.transform="rotate("+Math.random()*360+"deg)";
+        document.body.appendChild(piece);
+
+        setTimeout(()=>piece.remove(),5000);
+    }
+}
+</script>
+
+</body>
+</html>
